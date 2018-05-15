@@ -6,7 +6,10 @@ import styles from "./index.css";
 class Main extends React.Component{
 	render() {
 		return (
-			<Head />
+			<div>
+				<Head />
+				<BlogContent title="Hello" text="www" />
+			</div>
 		);
 	}
 }
@@ -35,7 +38,9 @@ class Button1 extends React.Component {
 	}
 	render() {
 		return (
-			<button onClick={this.handleClick} className={styles.type1} >{this.props.name}</button>
+			<button onClick={this.handleClick} className={styles.type1} >
+				{this.props.name}
+			</button>
 		);
 	}
 }
@@ -45,10 +50,29 @@ class Button2 extends React.Component {
 	}
 	render() {
 		return (
-			<button onClick={this.handleClick} className={styles.type2} >{this.props.name}</button>
+			<button onClick={this.handleClick} className={styles.type2} >
+				{this.props.name}
+			</button>
 		);
 	}
 }
+
+// Content
+class BlogContent extends React.Component {
+	render() {
+		return (
+			<div className={styles.blog} >
+				<div className={styles.title} >
+					<h1>{this.props.title}</h1><br />
+				</div>
+				<div className={styles.text} >
+					<p>{this.props.text}</p>
+				</div>
+			</div>
+		);
+	}
+}
+
 
 ReactDOM.render(
 	<Main />,

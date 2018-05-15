@@ -19,6 +19,11 @@ body {
 /*
 	header nav bar
 */
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .head {
 	background-color: #002020;
 	width: 100vw;
@@ -49,7 +54,7 @@ button {
 
 .type2 {
 	color: white;
-	background-color: #04f;
+	background-color: #04a;
 	border-radius: 5px;
 }
 .type2:hover {
